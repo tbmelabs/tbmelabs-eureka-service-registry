@@ -1,12 +1,17 @@
 eureka:
+  administrator:
+    name: eureka-administrator
+    password: Welcome$18
   client:
-    enabled: false
+    fetch-registry: false
+    register-with-eureka: false
   instance:
     metadata-map:
       user:
         name: actuator-admin
         password: Welcome$18
-        role: ACTUATOR
+  server:
+    enable-self-preservation: false
 security:
   oauth2:
     client:
@@ -17,6 +22,5 @@ security:
     resource:
       prefer-token-info: false
       user-info-uri: http://localhost/user
-spring:
-  profiles:
-    include: native
+server:
+  port: 8761
