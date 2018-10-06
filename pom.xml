@@ -38,8 +38,8 @@
         <com.spotify.dockerfile-maven-plugin.version>1.4.4</com.spotify.dockerfile-maven-plugin.version>
 
         <!-- Sonar configuration -->
-        <sonar.projectKey>configuration-server</sonar.projectKey>
-        <sonar.projectName>Configuration-Server</sonar.projectName>
+        <sonar.projectKey>eureka-service-registry</sonar.projectKey>
+        <sonar.projectName>Eureka-Service-Registry</sonar.projectName>
     </properties>
 
     <parent>
