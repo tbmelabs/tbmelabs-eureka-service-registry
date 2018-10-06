@@ -1,8 +1,8 @@
-# TBME Labs Configuration Server
+# TBME Labs Eureka Service Registry
 
-Configuration server which allows to manage global configuration.
+Service registry for microservice environments built upon Netflix Eureka.
 
-[![Build Status](https://travis-ci.org/tbmelabs/tbmelabs-configuration-server.svg?branch=master)](https://travis-ci.org/tbmelabs/tbmelabs-configuration-server)
+[![Build Status](https://travis-ci.org/tbmelabs/tbmelabs-eureka-service-registry.svg?branch=master)](https://travis-ci.org/tbmelabs/tbmelabs-eureka-service-registry)
 [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=configuration-server&metric=alert_status)](https://sonarcloud.io/dashboard?id=configuration-server)
 
 ### Prerequisites
@@ -46,4 +46,4 @@ See also the list of [contributors](https://github.com/tbmelabs/tbme-tv/contribu
 
 ## License
 
-This project is published under the terms of MIT License. For more information see the [license file](https://github.com/tbmelabs/tbmelabs-configuration-server/blob/development/LICENSE).
+This project is published under the terms of MIT License. For more information see the [license file](https://github.com/tbmelabs/tbmelabs-eureka-service-registry/blob/development/LICENSE).

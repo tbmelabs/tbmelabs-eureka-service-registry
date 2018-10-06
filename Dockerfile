@@ -1,13 +1,13 @@
 FROM openjdk:8-jre
 MAINTAINER TBME Labs <info@tbmelabs.ch>
 
-ENTRYPOINT ["/usr/bin/java", "-jar", "/home/configurationserver/configuration-server.jar"]
+ENTRYPOINT ["/usr/bin/java", "-jar", "/home/serviceregistry/configuration-server.jar"]
 
 ARG JAR_FILE
-ADD target/${JAR_FILE} /home/configurationserver/configuration-server.jar
+ADD target/${JAR_FILE} /home/serviceregistry/registry-server.jar
 
-RUN useradd -ms /bin/bash configurationserver
-RUN chown configurationserver /home/configurationserver/configuration-server.jar
+RUN useradd -ms /bin/bash serviceregistry
+RUN chown serviceregistry /home/serviceregistry/registry-server.jar
 
-USER configurationserver
-WORKDIR /home/configurationserver
+USER serviceregistry
+WORKDIR /home/serviceregistry
