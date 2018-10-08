@@ -3,7 +3,8 @@
 Service registry for microservice environments built upon Netflix Eureka.
 
 [![Build Status](https://travis-ci.org/tbmelabs/tbmelabs-eureka-service-registry.svg?branch=master)](https://travis-ci.org/tbmelabs/tbmelabs-eureka-service-registry)
-[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=configuration-server&metric=alert_status)](https://sonarcloud.io/dashboard?id=configuration-server)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=eureka-service-registry&metric=alert_status)](https://sonarcloud.io/dashboard?id=eureka-service-registry)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tbmelabs/tbmelabs-eureka-service-registry.svg)](https://hub.docker.com/r/tbmelabs/tbmelabs-eureka-service-registry)
 
 ### Prerequisites
 
