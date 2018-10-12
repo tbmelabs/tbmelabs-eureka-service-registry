@@ -1,5 +1,7 @@
 package ch.tbmelabs.serviceregistry.test.configuration;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import ch.tbmelabs.serviceregistry.configuration.OAuth2SSOSecurityConfiguration;
 import org.junit.Test;
 import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
