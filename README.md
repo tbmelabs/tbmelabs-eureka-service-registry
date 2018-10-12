@@ -10,8 +10,10 @@ Service registry for microservice environments built upon Netflix Eureka.
 
 Make sure to install the following software before starting:
 
-* [Java Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html): [This guide](https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html) leads you through the installation.
-* [Maven](https://maven.apache.org/download.cgi): Have a look at [this page](https://maven.apache.org/install.html) for any help while installing.
+* [Maven](https://maven.apache.org/) - A software project management and comprehension tool.
+* [Spring](https://spring.io/) - The source for modern java.
+
+And your IDE should support [Lombok](https://projectlombok.org/).
 
 ### Installing
 

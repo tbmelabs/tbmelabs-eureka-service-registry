@@ -1,7 +1,7 @@
-FROM openjdk:8-jre
+FROM openjdk:11-slim
 MAINTAINER TBME Labs <info@tbmelabs.ch>
 
-ENTRYPOINT ["/usr/bin/java", "-jar", "/home/serviceregistry/configuration-server.jar"]
+ENTRYPOINT ["/usr/bin/java", "-jar", "/home/serviceregistry/registry-server.jar"]
 
 ARG JAR_FILE
 ADD target/${JAR_FILE} /home/serviceregistry/registry-server.jar
