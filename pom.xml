@@ -30,23 +30,25 @@
         </developer>
     </developers>
 
-    <properties>
-        <!-- General configuration -->
-        <start-class>ch.tbmelabs.serviceregistry.Application</start-class>
-
-        <!-- Plugin configuration -->
-        <com.spotify.dockerfile-maven-plugin.version>1.4.4</com.spotify.dockerfile-maven-plugin.version>
-
-        <!-- Sonar configuration -->
-        <sonar.projectKey>eureka-service-registry</sonar.projectKey>
-        <sonar.projectName>Eureka-Service-Registry</sonar.projectName>
-    </properties>
-
+ <!-- DOTO: Update on release -->
+    <!-- https://oss.sonatype.org/content/repositories/snapshots/ch/tbmelabs/server-parent/ -->
     <parent>
         <groupId>ch.tbmelabs</groupId>
         <artifactId>server-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+    
+    <properties>
+        <!-- General configuration -->
+        <start-class>ch.tbmelabs.serviceregistry.Application</start-class>
+
+        <!-- Plugin configuration -->
+        <com.spotify.dockerfile-maven-plugin.version>1.4.7</com.spotify.dockerfile-maven-plugin.version>
+
+        <!-- Sonar configuration -->
+        <sonar.projectKey>eureka-service-registry</sonar.projectKey>
+        <sonar.projectName>Eureka-Service-Registry</sonar.projectName>
+    </properties>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-server -->
