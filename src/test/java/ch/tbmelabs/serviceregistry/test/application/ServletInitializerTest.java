@@ -3,25 +3,27 @@ package ch.tbmelabs.serviceregistry.test.application;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
+
+import ch.tbmelabs.serviceregistry.Application;
+import ch.tbmelabs.serviceregistry.ServletInitializer;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mockito;
-import org.mockito.Spy;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.test.util.ReflectionTestUtils;
-import ch.tbmelabs.serviceregistry.Application;
-import ch.tbmelabs.serviceregistry.ServletInitializer;
 
-@RunWith(MockitoJUnitRunner.class)
 public class ServletInitializerTest {
 
-  @Spy
   private ServletInitializer fixture;
 
+  @Before
+  public void beforeTestSetup() {
+    fixture = new ServletInitializer();
+  }
+
   @Test
-  public void applicationExtendsSpringBootServletInitializer() {
+  public void extendsSpringBootServletInitializer() {
     assertThat(SpringBootServletInitializer.class).isAssignableFrom(ServletInitializer.class);
   }
 

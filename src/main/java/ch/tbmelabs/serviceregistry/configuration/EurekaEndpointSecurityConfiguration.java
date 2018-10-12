@@ -1,5 +1,6 @@
 package ch.tbmelabs.serviceregistry.configuration;
 
+import ch.tbmelabs.serverconstants.security.ClientUserRoleEnum;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -9,8 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import ch.tbmelabs.serverconstants.security.ClientUserRoleEnum;
-import ch.tbmelabs.serviceregistry.configuration.ApplicationProperties;
 
 @Order(1)
 @Configuration
@@ -25,7 +24,7 @@ public class EurekaEndpointSecurityConfiguration extends WebSecurityConfigurerAd
   private String eurekaUserPassword;
 
   public EurekaEndpointSecurityConfiguration(ObjectPostProcessor<Object> objectPostProcessor,
-      ApplicationProperties applicationProperties) {
+    ApplicationProperties applicationProperties) {
     this.objectPostProcessor = objectPostProcessor;
 
     this.eurekaUserName = applicationProperties.getEureka().getAdministrator().getName();
@@ -36,8 +35,8 @@ public class EurekaEndpointSecurityConfiguration extends WebSecurityConfigurerAd
   protected AuthenticationManager authenticationManager() throws Exception {
     AuthenticationManagerBuilder builder = new AuthenticationManagerBuilder(objectPostProcessor);
     builder.inMemoryAuthentication().passwordEncoder(PASSWORD_ENCODER).withUser(eurekaUserName)
-        .password(PASSWORD_ENCODER.encode(eurekaUserPassword))
-        .roles(ClientUserRoleEnum.EUREKA_ENDPOINT.getAuthority());
+      .password(PASSWORD_ENCODER.encode(eurekaUserPassword))
+      .roles(ClientUserRoleEnum.EUREKA_ENDPOINT.getAuthority());
     return builder.build();
   }
 
