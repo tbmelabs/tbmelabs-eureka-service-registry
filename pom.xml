@@ -30,14 +30,14 @@
         </developer>
     </developers>
 
- <!-- DOTO: Update on release -->
+    <!-- DOTO: Update on release -->
     <!-- https://oss.sonatype.org/content/repositories/snapshots/ch/tbmelabs/server-parent/ -->
     <parent>
         <groupId>ch.tbmelabs</groupId>
         <artifactId>server-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    
+
     <properties>
         <!-- General configuration -->
         <start-class>ch.tbmelabs.serviceregistry.Application</start-class>
@@ -55,6 +55,12 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->

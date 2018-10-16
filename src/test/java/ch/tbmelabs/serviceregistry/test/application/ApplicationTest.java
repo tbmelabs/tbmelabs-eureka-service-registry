@@ -19,7 +19,6 @@ public class ApplicationTest {
 
   Application fixture;
 
-
   @Before
   public void beforeTestSetUp() {
     mockEnvironment = new MockEnvironment();

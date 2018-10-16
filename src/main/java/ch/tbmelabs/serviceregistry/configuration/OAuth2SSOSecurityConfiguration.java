@@ -22,7 +22,8 @@ public class OAuth2SSOSecurityConfiguration extends WebSecurityConfigurerAdapter
       .authorizeRequests()
         .antMatchers("/favicon.ico").permitAll()
         .antMatchers("/public/**", "/vendor/**").permitAll()
-        .anyRequest().hasAnyAuthority(UserRoleEnum.GANDALF.getAuthority(), 
+        .anyRequest().hasAnyAuthority(
+            UserRoleEnum.GANDALF.getAuthority(), 
             UserRoleEnum.SERVER_ADMIN.getAuthority(), 
             UserRoleEnum.SERVER_SUPPORT.getAuthority())
 
